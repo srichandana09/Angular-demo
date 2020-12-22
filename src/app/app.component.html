@@ -1,0 +1,14 @@
+
+<div class="content" role="main">
+  <div>
+     <P>When we click the button, the component do an HTTP GET to the API at the URL and fetch last name(employee_name})</P>
+      <p>It will display error message when we click button twice less than half-second</p>
+    <button type="button" (click)="onClick()" [disabled]="loading">Get the last name!</button>
+    <div *ngIf="employee">
+      <span>The employee name is {{ employee.data.employee_name}}</span>
+    </div>
+    <div *ngIf="error">
+      <span>Error while making API call: {{ error.error.message}}</span>
+    </div>
+  </div>
+</div>
